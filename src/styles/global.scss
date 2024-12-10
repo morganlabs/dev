@@ -1,0 +1,57 @@
+@use "fonts";
+@use "vars" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-family;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 3.125rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: $body-family;
+  font-weight: $body-weight;
+  font-size: $body-size;
+  line-height: $body-line-height;
+}
+
+a,
+button {
+  font-family: $link-family;
+  font-weight: $link-weight;
+}
