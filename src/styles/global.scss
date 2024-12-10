@@ -54,4 +54,19 @@ a,
 button {
   font-family: $link-family;
   font-weight: $link-weight;
+  color: $accent;
+}
+
+button {
+  font-size: 1.125rem;
+  display: block;
+  padding: 0.75rem 1rem;
+  border: 2px solid $accent;
+  background: $black;
+
+  &:hover {
+    cursor: pointer;
+    background: $accent;
+    color: $black;
+  }
 }
