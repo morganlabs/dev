@@ -1,0 +1,51 @@
+---
+import Logo from "../../assets/logo/icon.svg";
+
+const pages: { title: string; href: string }[] = [
+  { title: "About", href: "/about" },
+  { title: "Experience", href: "/experience" },
+  { title: "Blog", href: "/blog" },
+  { title: "Contact", href: "/contact" },
+];
+---
+
+<nav class="nav">
+  <img class="logo" src={Logo.src} />
+  <ul class="links">
+    {
+      pages.map(({ title, href }) => (
+        <li class="link">
+          <a {href}>{title}</a>
+        </li>
+      ))
+    }
+    <button>Résumé</button>
+  </ul>
+</nav>
+
+<style lang="scss">
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: $content-width;
+    background: $black;
+    margin-inline: auto;
+  }
+
+  .logo {
+    height: 64px;
+  }
+
+  .links {
+    display: flex;
+    list-style: none;
+  }
+
+  .link a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: $white;
+    text-decoration: none;
+  }
+</style>
